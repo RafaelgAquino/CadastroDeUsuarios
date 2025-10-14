@@ -1,4 +1,4 @@
-package br.gov.br.seduh.Cadastro;
+package br.gov.br.seduh.Cadastro.Users;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

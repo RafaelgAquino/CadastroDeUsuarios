@@ -1,5 +1,6 @@
-package br.gov.br.seduh.Cadastro;
+package br.gov.br.seduh.Cadastro.Users;
 
+import br.gov.br.seduh.Cadastro.Tasks.TasksModel;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,6 +14,10 @@ public class UserModel {
     private String email;
     private int idade;
 
+    @ManyToOne
+    @JoinColumn(name = "missoes_id ")
+    private TasksModel tasks;
+
     public UserModel() {
     }
 
@@ -21,6 +26,8 @@ public class UserModel {
         this.email = email;
         this.idade = idade;
     }
+
+
 
     public String getNome() {
         return nome;
