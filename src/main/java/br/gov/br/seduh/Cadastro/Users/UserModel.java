@@ -31,6 +31,6 @@ public class UserModel {
     private int idade;
 
     @ManyToOne
-    @JoinColumn(name = "missoes_id ")
+    @JoinColumn(name = "missoes_id")
     private TasksModel tasks;
 }
