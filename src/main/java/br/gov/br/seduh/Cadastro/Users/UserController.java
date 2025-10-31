@@ -3,7 +3,7 @@ package br.gov.br.seduh.Cadastro.Users;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/usuarios")
 public class UserController {
 
     @GetMapping ("/boasvindas")
@@ -18,7 +18,7 @@ public class UserController {
     }
 
     //Mostrar todos os usuários (READ)
-    @GetMapping ("/todos")
+    @GetMapping ("/listarID")
     public String mostrarTodosOsUsuarios() {
         return "Mostrar usuário";
     }
