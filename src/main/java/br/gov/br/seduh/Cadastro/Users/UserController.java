@@ -32,16 +32,17 @@ public class UserController {
     }
 
     //Mostrar usuários por id (READ)
-    @GetMapping ("/todosID")
-    public String mostrarTodosOsUsuariosPorId() {
-        return "Mostrar usuário por id";
+    @GetMapping ("/listar/{id}")
+    public UserModel listarUsuariosPorId(@PathVariable Long id) {
+        return userService.listarUsuariosPorId(id);
     }
 
     //Alterar dados dos usuários (UPDATE)
     @PutMapping ("/alterarID")
     public String alterarUsuarioPorId() {
-         return "Alterar usuário por id";
+        return "Alterar usuário por id";
     }
+
     //Deletar usuário (DELETE)
     @DeleteMapping ("/deletarID")
     public String deletarUsuarioPorId() {
