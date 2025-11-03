@@ -2,6 +2,7 @@ package br.gov.br.seduh.Cadastro.Tasks;
 
 import java.util.List;
 import br.gov.br.seduh.Cadastro.Users.UserModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +22,9 @@ public class TasksModel {
     private String dificuldade;
 
     @OneToMany(mappedBy = "tasks")
+    @JsonIgnore
     private List<UserModel>  users;
+
+
 
 }
