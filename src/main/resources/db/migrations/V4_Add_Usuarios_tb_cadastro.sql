@@ -1,0 +1,3 @@
+INSERT INTO TB_CADASTRO
+VALUES (2,'vitors.lima@seduh.pe.gov.br',37,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0S1WtOyyByLqs_-VHL78uFS-Q_QYVo1YqrQ&s','Vitor Lima',2,'Apoio Administrativo'),
+       (1,'rafael.aquino@seduh.pe.gov.br',24,'https://upload.wikimedia.org/wikipedia/commons/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg','Rafael Aquino',1,'Apoio Administrativo')
