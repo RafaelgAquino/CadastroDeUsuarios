@@ -24,4 +24,7 @@ public class UserService {
         Optional<UserModel> userPorId = userRepository.findById(id);
         return userPorId.orElse(null);
     }
+    public UserModel criarUsuario(UserModel usuario) {
+        return userRepository.save(usuario);
+    }
 }
