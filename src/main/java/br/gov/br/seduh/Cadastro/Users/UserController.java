@@ -38,14 +38,14 @@ public class UserController {
     }
 
     //Alterar dados dos usuários (UPDATE)
-    @PutMapping ("/alterarID")
-    public String alterarUsuarioPorId() {
-        return "Alterar usuário por id";
+    @PutMapping ("/alterar/{id}")
+    public UserModel alterarUsuarioPorId(@PathVariable Long id) {
+        return userService.alterarUsuarioPorId(id);
     }
 
     //Deletar usuário (DELETE)
-    @DeleteMapping ("/deletarID")
-    public String deletarUsuarioPorId() {
-        return "Deletar usuário por id";
+    @DeleteMapping ("/deletar/{id}")
+    public void deletarUsuarioPorId(@PathVariable Long id) {
+        userService.deletarUsuarioPorId(id);
     }
 }

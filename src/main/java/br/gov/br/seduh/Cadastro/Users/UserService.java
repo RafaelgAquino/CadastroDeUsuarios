@@ -24,7 +24,16 @@ public class UserService {
         Optional<UserModel> userPorId = userRepository.findById(id);
         return userPorId.orElse(null);
     }
+    //Criar usuário (CREATE)
     public UserModel criarUsuario(UserModel usuario) {
         return userRepository.save(usuario);
+    }
+    //Deletar usuário (DELETE)
+    public void deletarUsuarioPorId (Long id) {
+        userRepository.deleteById(id);
+    }
+    //Alterar usuário (UPDATE)
+    public UserModel alterarUsuarioPorId (Long id) {
+        userRepository.
     }
 }
