@@ -33,7 +33,11 @@ public class UserService {
         userRepository.deleteById(id);
     }
     //Alterar usuário (UPDATE)
-    public UserModel alterarUsuarioPorId (Long id) {
-        userRepository.
+    public UserModel alterarUsuarioPorId (Long id, UserModel usuarioAtualizado) {
+        if (userRepository.existsById(id)) {
+            usuarioAtualizado.setId(id);
+            return userRepository.save(usuarioAtualizado);
+        }
+        return null;
     }
 }
